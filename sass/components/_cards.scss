@@ -1,0 +1,167 @@
+
+.best-sellers {
+    text-align: center;
+    font-size: $size-2xl;
+    margin: 1.5rem 0;
+}
+
+.cards__carousel-container {
+    width: 350px;
+    margin: 1rem auto;
+    .cards__carousel {
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+        .cards__carousel-controls {
+            .cards__carousel-controls-arrows {
+                position: absolute;
+                top: 54%;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 4px;
+                width: 100%;
+            }
+            .cards__carousel-controls-arrow {
+                width: $size-4xl;
+                height: $size-4xl;
+                color: $color-slate600;
+            }
+            .cards__carousel-controls-selector {
+                position: absolute;
+                bottom: 12px;
+                left: 50%;
+                transform: translateX(-50%);
+                ul {
+                    display: flex;
+                    list-style: none;
+                    gap: 1rem;
+                    li {
+                        cursor: pointer;
+                        background-color: $color-slate600;
+                        border-radius: 50%;
+                        width: $size-xxs;
+                        height: $size-xxs;
+                        &[selected] {
+                            background-color: $color-light;
+                        }
+                    }
+                }
+            }
+        }
+        .cards__slider {
+            height: 100%;
+            display: flex;
+            // width: 400%;
+            transition: transform 0.6s;
+            
+        }
+    }
+}
+
+.cards__card {
+    flex-basis: 100%;
+    height: 100%;
+    border: 1px solid $color-slate600;
+    border-radius: 6px;
+    margin: 0 0.5rem;
+    .cards__card-img-container {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        background-color: white;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+    .cards__card-img-container:hover::after {
+        content: 'Ver más';
+        color: $color-light;
+        width: 100%;
+        height: 100%;
+        background-color: #475569a1;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards__card-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: calc(100% - 250px);
+        h2 {
+            text-align: center;
+            span {
+                color: $color-slate400;
+                font-size: $size-lg;
+            }
+        }
+        p {
+            text-align: center;
+            color: $color-slate400;
+            padding: 0 0.5rem;
+        }
+        .cards__card-price-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .cards__card-cart {
+                color: $color-slate600;
+                width: $size-5xl;
+                height: $size-5xl;
+                border: 2px solid $color-slate600;
+                border-radius: 6px;
+                padding: 0.5rem;
+                transition: all 0.3s;
+                &:hover {
+                    transform: scale(1.2);
+                    background-color: $color-slate600;
+                    border-color: $color-dark;
+                    color: $color-dark;
+                }
+            }
+            .cards__card-price {
+                span {
+                    font-size: $size-3xl;
+                }
+            }
+        }
+    }
+}
+
+.cards__grid-container {
+    display: none;
+}
+
+// /* xs */
+// @media (min-width: 475px) {}
+
+// /* sm */
+// @media (min-width: 640px) {}
+
+// /* lg */
+@media (min-width: 768px) {
+    .best-sellers {
+        font-size: $size-3xl;
+    }
+    .cards__carousel-container {
+        display: none;
+    }
+    .cards__grid-container {
+        display: grid;
+        margin: 1rem 0;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+        grid-template-rows: repeat(auto-fit, 550px);
+        grid-auto-rows: 550px;
+        justify-content: center;
+    }
+}
+
+// /* xl */
+// @media (min-width: 1024px) {}
+
+// /* 2xl */
+// @media (min-width: 1280px) {}
+
+// /* 3xl */
+// @media (min-width: 1536px) {}

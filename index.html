@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetería Cósmica</title>
+    <link rel="stylesheet" href="sass/main.css">
+</head>
+
+<body>
+    <main>
+        <header class="header container">
+            <div class="header__logo-container">
+                <a href="index.html"><img class="header__logo" src="images/gift-xxl.png" alt="Logo de Juguetería Cósmica"></a>
+                <div class="header__line"></div>
+                <a class="header__store selectedPage" href="index.html">Tienda</a>
+            </div>
+            <nav>
+                <ul class="header__menu">
+                    <li class="header__search">
+                        <button class="header__search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                              </svg>                              
+                        </button>
+                        <input type="text" name="" id="" placeholder="Buscar en la tienda">
+                    </li>
+                    <li><a class="header__link" href="./pages/alta.html">Alta</a></li>
+                    <li><a class="header__link" href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a class="header__link" href="./pages/contactanos.html">Contactanos</a></li>
+                </ul>
+            </nav>
+            <button data-nav-bars class="header__bars">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </header>
+        <!-- Mobile navigation -->
+        <div class="mobile-nav">
+            <header class="mobile-nav__header">
+                <a class="slideOutLeft" href="index.html">Tienda</a>
+                <button data-closeNav-btn>&times;</button>
+            </header>
+            <nav>
+                <ul class="mobile-nav__menu">
+                    <div class="mobile-nav__link">
+                        <li class="mobile-nav__search">
+                            <button class="mobile-nav__search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
+                                  </svg>                              
+                            </button>
+                            <input type="text" name="" id="" placeholder="Buscar en la tienda">
+                        </li>
+                    </div>
+                    <a  class="mobile-nav__link" href="./pages/alta.html">
+                        <div>
+                            <li>Alta</li>
+                        </div>
+                    </a>
+                    <a  class="mobile-nav__link" href="./pages/nosotros.html">
+                        <div>
+                            <li>Nosotros</li>
+                        </div>
+                    </a>
+                    <a  class="mobile-nav__link" href="./pages/contactanos.html">
+                        <div>
+                            <li>Contactanos</li>
+                        </div>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <!-- End of mobile navigation -->
+        <h1 class="best-sellers">Los más vendidos</h1>
+        <section class="cards container">
+            <div class="cards__carousel-container">
+                <div class="cards__carousel">
+                    <div  data-card-container class="cards__slider">
+                        <template data-card-template>
+                            <div class="cards__card">
+                                <a href="">
+                                    <div class="cards__card-img-container">
+                                        <img data-img src="" alt="">
+                                    </div>
+                                </a>
+                                <div class="cards__card-description">
+                                    <a href=""><h2 data-name></h2></a>
+                                    <p data-description>
+                                    </p>
+                                    <div class="cards__card-price-container">
+                                        <div class="cards__card-price">
+                                            <span data-price></span>
+                                        </div>
+                                        <a href="">
+                                            <button class="cards__card-cart">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
+                                                  </svg>                                          
+                                            </button>                                    
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="cards__carousel-controls">
+                        <div class="cards__carousel-controls-arrows">
+                            <button data-arrow-left class="cards__carousel-controls-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd" />
+                                  </svg>                             
+                            </button>
+                            <button data-arrow-right class="cards__carousel-controls-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                                  </svg>                                                         
+                            </button>
+                        </div>
+                        <div class="cards__carousel-controls-selector">
+                            <ul data-selector-container>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div data-grid-container class="cards__grid-container">
+            </div>
+        </section>
+        <footer class="footer">
+            <p>
+                2024, Juguetería Cósmica. Todos los derechos reservados.
+            </p>
+            <div>
+                <ul>
+                    <li><a href="">Términos de servicio</a></li>
+                    <li><a href="">Pólitica de privacidad</a></li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+.mobile-nav {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-dark;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    display: none;
+    .mobile-nav__header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 1.5rem;
+        button {
+            font-size: $size-2xl;
+            color: white;
+        }
+    }
+    .mobile-nav__menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%; 
+        .mobile-nav__link {
+            display: block;
+            padding: 0.5rem;
+            background-color: $color-slate800;
+            border-radius: 10px;
+            width: 80%;
+            padding: 0.8rem;
+            transition: background-color 0.3s;
+            &:not(:first-child):hover {
+                background-color: $color-slate600;
+            }
+            .mobile-nav__search {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                &:focus-within, &:hover {
+                    .mobile-nav__search-icon, ::placeholder {
+                        color: $color-light;
+                    }
+                }
+                .mobile-nav__search-icon{
+                    color: $color-slate600;
+                    width: $size-2xl;
+                    height: $size-2xl;
+                    cursor: default;
+                }
+                .mobile-nav__search-icon, ::placeholder {
+                    transition: all 0.3s;
+                }
+                input {
+                    background-color: transparent;
+                    color: $color-light;
+                    width: 80%;
+                    &:focus {
+                        color: $color-light;
+                    }
+                    &::placeholder {
+                        color: $color-slate600;
+
+                    }
+                }
+            }
+        } 
+    }
+}
+

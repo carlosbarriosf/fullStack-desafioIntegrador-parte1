@@ -1,0 +1,22 @@
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background-color: $color-slate800;
+    flex-direction: column;
+    gap: 0.5rem;
+    p, li {
+        color: $color-slate600;
+        font-size: $size-xs;
+        text-align: center
+    }
+    ul {
+        list-style-type: none;
+        margin-bottom: 0.5rem;
+    }
+    a:hover {
+        color: $color-light
+    }
+}

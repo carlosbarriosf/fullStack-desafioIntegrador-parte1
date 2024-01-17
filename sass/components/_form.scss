@@ -1,0 +1,124 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    h1 {
+        font-size: $size-base;
+    }
+    .form__row {
+        font-size: $size-sm;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: $color-slate800;
+        gap: 0.5rem;
+        width: 90%;
+        transition: transform 0.3s;
+        &:focus-within {
+            transform: scale(1.1);
+        }
+        input {
+            height: 2em;
+            padding: 0 0.5em;
+            background-color: transparent;
+            border-bottom: 1px solid gray;
+            transition: all 0.3s;
+            &:focus {
+                border-color: $color-slate400;
+            }
+        }
+        input[aria-invalid = true] {
+            border-bottom: 1px solid $color-error;
+        }
+        input[type = file] {
+            border: none;
+        }
+        textarea {
+            resize: vertical;
+            max-height: 400px;
+            min-height: 80px;
+        }
+        input, textarea {
+            background-color: transparent;
+            color: $color-light;
+        }
+        p {
+            font-size: $size-xs;
+            color: $color-error;
+        }
+    }
+    .alta__age {
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        input {
+            width: 5em;
+            text-align: center;
+            margin-left: 0.5em;
+        }
+    }
+    .alta__checkbox {
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+    .form__controls {
+        display: flex;
+        gap: 2rem;
+        button {
+            font-size: $size-sm;
+            background-color: $color-slate600;
+            color: $color-light;
+            padding: 0.6rem;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: $color-slate400;
+            }
+        }
+    }
+}
+
+// /* xs */
+// @media (min-width: 475px) {}
+
+// /* sm */
+@media (min-width: 640px) {
+    .form__row{
+        max-width: 640px;
+    }
+}
+
+// /* lg */
+// @media (min-width: 768px) {}
+
+// /* xl */
+@media (min-width: 1024px) {
+    .form {
+        h1 {
+            font-size: $size-xl;
+        }
+        .form__row{
+            font-size: $size-lg;
+        }
+        .form__controls {
+            button {
+                font-size: $size-lg;
+            }
+        }
+    }
+}
+
+// /* 2xl */
+// @media (min-width: 1280px) {}
+
+// /* 3xl */
+// @media (min-width: 1536px) {}
