@@ -1,0 +1,115 @@
+
+.nosotros {
+    padding-bottom: 66px;
+    .nosotros__banner {
+        background-image: url('../../images/nosotros-banner.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 500px;
+        margin: 2rem 0;
+        position: relative;
+        h1 {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+        }
+        span {
+            position: absolute;
+            top: 25%;
+            text-align: center;
+            font-weight: 600;
+        }
+    }
+}
+
+// /* xs */
+// @media (min-width: 475px) {}
+
+// /* sm */
+@media (min-width: 640px) {
+    .nosotros {
+        .nosotros__banner {
+            width: 100%;
+            height: 600px;
+            h1 {
+                top: 16%;
+                font-size: $size-3xl;
+            }
+            span {
+                font-size: $size-lg;
+                top: 28%;
+            }
+        }
+    }
+}
+
+// /* lg */
+@media (min-width: 768px) {
+    .nosotros {
+        .nosotros__banner {
+            width: 100%;
+            height: 750px;
+            h1 {
+                top: 18%;
+                font-size: $size-4xl;
+            }
+            span {
+                font-size: $size-xl;
+                top: 30%;
+            }
+        }
+        p {
+            font-size: $size-base;
+        }
+    }
+}
+
+// /* xl */
+@media (min-width: 1024px) {
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .nosotros__banner {
+            width: 80%;
+            height: 800px;
+            h1 {
+                top: 18%;
+                font-size: $size-4xl;
+            }
+            span {
+                font-size: $size-xl;
+                top: 32%;
+            }
+        }
+        p {
+            // font-size: $size-lg;
+            width: 80%;
+        }
+    }
+}
+
+/* 2xl */
+@media (min-width: 1280px) {
+    .nosotros {
+        .nosotros__banner {
+            width: 1011.2px;
+            height: 1000px;
+            h1 {
+                top: 18%;
+                font-size: $size-5xl;
+            }
+            span {
+                font-size: $size-2xl;
+                top: 32%;
+            }
+        }
+        p {
+            width: 1011.2px;
+        }
+    }
+}

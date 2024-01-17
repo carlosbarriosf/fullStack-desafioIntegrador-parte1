@@ -7,6 +7,7 @@
     background-color: $color-slate800;
     flex-direction: column;
     gap: 0.5rem;
+    padding: 0.5rem 0;
     p, li {
         color: $color-slate600;
         font-size: $size-xs;
@@ -14,7 +15,6 @@
     }
     ul {
         list-style-type: none;
-        margin-bottom: 0.5rem;
     }
     a:hover {
         color: $color-light

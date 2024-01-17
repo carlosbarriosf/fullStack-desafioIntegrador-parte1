@@ -406,6 +406,7 @@ main {
   background-color: #1e293b;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 .footer p, .footer li {
   color: #475569;
@@ -414,7 +415,6 @@ main {
 }
 .footer ul {
   list-style-type: none;
-  margin-bottom: 0.5rem;
 }
 .footer a:hover {
   color: #f1f5f9;
@@ -613,4 +613,103 @@ main {
 }
 .mobile-nav .mobile-nav__menu .mobile-nav__link .mobile-nav__search input::placeholder {
   color: #475569;
+}
+
+.nosotros {
+  padding-bottom: 66px;
+}
+.nosotros .nosotros__banner {
+  background-image: url("../../images/nosotros-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  margin: 2rem 0;
+  position: relative;
+}
+.nosotros .nosotros__banner h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.nosotros .nosotros__banner span {
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .nosotros .nosotros__banner {
+    width: 100%;
+    height: 600px;
+  }
+  .nosotros .nosotros__banner h1 {
+    top: 16%;
+    font-size: 1.875rem;
+  }
+  .nosotros .nosotros__banner span {
+    font-size: 1.125rem;
+    top: 28%;
+  }
+}
+@media (min-width: 768px) {
+  .nosotros .nosotros__banner {
+    width: 100%;
+    height: 750px;
+  }
+  .nosotros .nosotros__banner h1 {
+    top: 18%;
+    font-size: 2.25rem;
+  }
+  .nosotros .nosotros__banner span {
+    font-size: 1.25rem;
+    top: 30%;
+  }
+  .nosotros p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nosotros .nosotros__banner {
+    width: 80%;
+    height: 800px;
+  }
+  .nosotros .nosotros__banner h1 {
+    top: 18%;
+    font-size: 2.25rem;
+  }
+  .nosotros .nosotros__banner span {
+    font-size: 1.25rem;
+    top: 32%;
+  }
+  .nosotros p {
+    width: 80%;
+  }
+}
+/* 2xl */
+@media (min-width: 1280px) {
+  .nosotros .nosotros__banner {
+    width: 1011.2px;
+    height: 1000px;
+  }
+  .nosotros .nosotros__banner h1 {
+    top: 18%;
+    font-size: 3rem;
+  }
+  .nosotros .nosotros__banner span {
+    font-size: 1.5rem;
+    top: 32%;
+  }
+  .nosotros p {
+    width: 1011.2px;
+  }
 }/*# sourceMappingURL=main.css.map */
