@@ -24,6 +24,11 @@
             font-weight: 600;
         }
     }
+    p {
+        a {
+            color: #BE185D;
+        }
+    }
 }
 
 // /* xs */
@@ -59,7 +64,6 @@
             }
             span {
                 font-size: $size-xl;
-                top: 30%;
             }
         }
         p {
@@ -83,7 +87,7 @@
             }
             span {
                 font-size: $size-xl;
-                top: 32%;
+                top: 29%;
             }
         }
         p {
@@ -105,7 +109,7 @@
             }
             span {
                 font-size: $size-2xl;
-                top: 32%;
+                // top: 32%;
             }
         }
         p {

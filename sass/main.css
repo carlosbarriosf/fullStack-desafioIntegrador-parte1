@@ -641,6 +641,9 @@ main {
   text-align: center;
   font-weight: 600;
 }
+.nosotros p a {
+  color: #BE185D;
+}
 
 @media (min-width: 640px) {
   .nosotros .nosotros__banner {
@@ -667,7 +670,6 @@ main {
   }
   .nosotros .nosotros__banner span {
     font-size: 1.25rem;
-    top: 30%;
   }
   .nosotros p {
     font-size: 1rem;
@@ -689,7 +691,7 @@ main {
   }
   .nosotros .nosotros__banner span {
     font-size: 1.25rem;
-    top: 32%;
+    top: 29%;
   }
   .nosotros p {
     width: 80%;
@@ -707,7 +709,6 @@ main {
   }
   .nosotros .nosotros__banner span {
     font-size: 1.5rem;
-    top: 32%;
   }
   .nosotros p {
     width: 1011.2px;
