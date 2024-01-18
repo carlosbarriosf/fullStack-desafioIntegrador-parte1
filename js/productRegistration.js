@@ -12,6 +12,7 @@ const ageToInput = document.getElementById('ageTo');
 const photoInput = document.getElementById('photo');
 
 //Boolean that determines if the form is valid or not
+const isFormValid = [];
 let isValid = false;
 
 const validateStg = (stg) => {
@@ -65,18 +66,36 @@ function checkAlfabeticValue(input, minLength, maxLength) {
 
 nameInput.addEventListener('blur', () => {
     checkAlfabeticValue(nameInput, 3, 30);
+    if (isValid) {
+        isFormValid[0] = true;
+    } else {
+        isFormValid[0] = false;
+    }
+    console.log(isFormValid)
 });
 
 //  Marca
 
 brandInput.addEventListener('blur', () => {
     checkAlfabeticValue(brandInput, 3, 30);
+    if (isValid) {
+        isFormValid[3] = true;
+    } else {
+        isFormValid[3] = false;
+    }
+    console.log(isFormValid)
 })
 
 //  Categoría *
 
 categoryInput.addEventListener('blur', () => {
     checkAlfabeticValue(categoryInput, 3, 20);
+    if (isValid) {
+        isFormValid[4] = true;
+    } else {
+        isFormValid[4] = false;
+    }
+    console.log(isFormValid)
 })
 
 //  Descripción corta *
@@ -90,6 +109,12 @@ shortDescInput.addEventListener('blur', () => {
         showErrorMessage(shortDescInput, validStg);
         isValid = false;
     }
+    if (isValid) {
+        isFormValid[5] = true;
+    } else {
+        isFormValid[5] = false;
+    }
+    console.log(isFormValid)
 })
 
 //  Precio *
@@ -102,6 +127,12 @@ priceInput.addEventListener('blur', () => {
         hideErrorMessage(priceInput);
         isValid = true;
     }
+    if (isValid) {
+        isFormValid[1] = true;
+    } else {
+        isFormValid[1] = false;
+    }
+    console.log(isFormValid)
 })
 
 //  Stock *
@@ -119,6 +150,12 @@ stockInput.addEventListener('blur', () => {
         showErrorMessage(stockInput, "El valor de este campo debe ser mayor o igual a 0");
         isValid = false;
     }
+    if (isValid) {
+        isFormValid[2] = true;
+    } else {
+        isFormValid[2] = false;
+    }
+    console.log(isFormValid)
 })
 
 //  Edad desde y hasta
@@ -149,6 +186,12 @@ function handleAgeInput() {
         paragraph.innerText = "Debe definir ambos límites de edad";
         isValid = false;
     }
+    if (isValid) {
+        isFormValid[6] = true;
+    } else {
+        isFormValid[6] = false;
+    }
+    console.log(isFormValid)
 }
 
 ageFromInput.addEventListener('blur', handleAgeInput);
@@ -172,9 +215,9 @@ function saveToyOnLocalStorage (newToy) {
 
 function onFormSubmit(e) {
     e.preventDefault();
-    console.log(isValid);
+    console.log(isFormValid);
     const form = document.getElementById('uploadForm');
-    if (isValid) {
+    if (isFormValid.indexOf(false) === -1) {
         const newToy = {
             name:       nameInput.value,
             price:      Number(priceInput.value),

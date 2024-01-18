@@ -1,5 +1,6 @@
 
 let isValid = false;
+const isFormValid = [];
 
 const validateStg = (stg) => {
     const regExp = new RegExp("^[A-Za-z ]+$");
@@ -58,6 +59,12 @@ const comment = document.getElementById('comment');
 
 userNameInput.addEventListener('blur', () => {
     checkAlfabeticValue(userNameInput, 5, 40);
+    if (isValid) {
+        isFormValid[0] = true;
+    } else {
+        isFormValid[0] = false;
+    }
+    console.log(isFormValid)
 })
 
 //Mail del usuario
@@ -70,6 +77,12 @@ userMailInput.addEventListener('blur', () => {
         showErrorMessage(userMailInput, "La dirección de e-mail ingresada no coincide con un formato correcto");
         isValid = false;
     }
+    if (isValid) {
+        isFormValid[1] = true;
+    } else {
+        isFormValid[1] = false;
+    }
+    console.log(isFormValid)
 })
 
 function saveCommentOnLocalStorage (newComment) {
@@ -88,9 +101,9 @@ function saveCommentOnLocalStorage (newComment) {
 
 function onCommentSubmit (e) {
     e.preventDefault();
-    console.log(isValid);
+    console.log(isFormValid.indexOf(false));
     const form = document.getElementById('commentForm');
-    if(isValid) {
+    if(isFormValid.indexOf(false) === -1) {
         const newComment = {
             userName: userNameInput.value,
             userMail: userMailInput.value,
